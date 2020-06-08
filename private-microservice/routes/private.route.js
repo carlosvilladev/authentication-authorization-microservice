@@ -4,8 +4,7 @@ const router = express.Router();
 
 
 router.get('/', auth, async (req, res) => {
-    const users = await User.find({});
-    res.json(users);
+   res.send(req.user);
 });
 
 module.exports = router;
